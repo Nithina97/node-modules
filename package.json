@@ -1,0 +1,11 @@
+{
+  "name": "node-express",
+  "version": "1.0.0",
+  "description": "my first node and express app",
+  "main": "server.js",
+  "author": "nithina",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

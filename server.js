@@ -13,6 +13,12 @@ app.set('view engine', 'handlebars');
 
 /*===================ENDS MIDDLEWEAR BLOCK=====================*/
 
+/*===================SERVE STATIC ASSETS======================*/
+app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/node_modules"));
+
+/*===============ENDS STATIC ASSETS HERE=================================*/
+
 //connect database
 
 let mongodb_url =
@@ -33,9 +39,20 @@ mongoose.connect(
 
 //basic route
 app.get("/", (req, res) => {
-    res.render("./home.handlebars");
+    res.render("./home");
   });
 
+  /*===============ALL GET REQUEST ====================*/
+  app.get("/login" , (req,res) => {
+      res.render("./auth/login");
+  });
+  app.get("/register" , (req,res) => {
+    res.render("./auth/register");
+});
+
+app.get("/add-profile" , (req, res) => {
+    res.render("./profiles/addprofile-form");
+});
 
 //listen port
 

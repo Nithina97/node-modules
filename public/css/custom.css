@@ -6,7 +6,17 @@
 body{
     font-family: 'Poppins', 
             sans-serif;
-    color: #fff;
-    background-color: crimson;
+    color: #111;
+    background-color: #eee;
 
+}
+.custom_card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.card {
+    margin: 10px;
 }

@@ -1,4 +1,5 @@
 /*=========Profile Schema by using mongoose ===============*/
+
 const mongoose = require("mongoose"); //loading mongoose
 const Schema = mongoose.Schema; //init
 
@@ -22,3 +23,5 @@ const ProfileSchema = new Schema({
         default: Date.now,
     },
 });
+
+module.exports = mongoose.model("profile" , ProfileSchema);

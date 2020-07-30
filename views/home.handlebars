@@ -1,1 +1,26 @@
-<h1>Home Page</h1>
+<div class="container my-4">
+    <div class="custom_card">
+        {{#each profile}}
+
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">
+                    {{firstname}}
+                </h2>
+                <p class="card-text">
+                    {{lastname}}
+                </p>
+                <p class="card-text">
+                    {{phone}}
+                </p>
+                <p class="card-text">
+                    {{date}}
+                </p>
+            </div>
+        </div>
+
+        {{else}}
+        <h1>no profile found</h1>
+        {{/each}}
+    </div>
+</div>

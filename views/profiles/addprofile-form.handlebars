@@ -1,7 +1,16 @@
-<div class="col-md-3 mx-auto">
-    <h1 class="display-5 font-weight-bold text-uppercase text-center">Profile form</h1>
+{{#each errors}}
+<div class="col-md-4 mx-auto">
+    <div class="alert alert-danger">{{text}}</div>
+</div>
+
+{{else}}
+
+{{/each}}
+
+<div class="col-md-3 card mx-auto my-4">
+    <h1 class="display-6 font-weight-bold text-uppercase text-center mt-4">Profile form</h1>
     <div class="card-body">
-        <form action="">
+        <form action="/create-profile" method="POST">
             <div class="form-group">
                 <label for="firstname">firstname</label>
                 <input type="firstname"
